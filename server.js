@@ -37,13 +37,14 @@ server . route ( {
     method :   'GET' , 
     path :   '/' , 
     handler :   function   ( request ,   reply )   { 
-        Request . get ( 'http://aulamejor.dotlabit.com/dev' ,   function   ( error ,   response ,   body )   { 
+        Request . get ( 'https://82yxm8sh2f.execute-api.us-west-2.amazonaws.com/dev/cursos/' ,   function   ( error ,   response ,   body )   { 
             if   ( error )   { 
                 throw   error ; 
             } 
 
-            const   data   =   JSON . parse ( body ) ; 
-            reply . view ( 'index' ,   {   result :   data   } ) ; 
+            const   data   =    JSON.parse (body); 
+            reply . view ( 'index' ,   {   result :   data[0], result2: data[1]   } ) ; 
+            console.log(data)
         } ) ; 
     } 
 } ) ; 
