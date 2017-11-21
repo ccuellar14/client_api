@@ -10,7 +10,7 @@ const LodashTake = require('lodash.take');
 const server = new Hapi.Server();
 
 server.connection({
-   host: '127.0.0.1',
+   host: 'localhost',
    port: 3000
 });
 
@@ -30,7 +30,7 @@ server.start((err) => {
        throw err;
    }
 
-   console.log(`Server running at: ${server.info.uri}`);
+   console.log('Server running at:', server.info.uri);
 });
 
 server . route ( { 
@@ -47,9 +47,4 @@ server . route ( {
             console.log(data)
         } ) ; 
     } 
-} ) ; 
-
-// A simple helper function that extracts team ID from team URL 
-Handlebars . registerHelper ( 'teamID' ,   function   ( teamUrl )   { 
-    return   teamUrl . slice ( 38 ) ; 
 } ) ; 
