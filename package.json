@@ -1,0 +1,19 @@
+{
+  "name": "client_api",
+  "version": "1.0.0",
+  "description": "A client API",
+  "main": "server.js",
+  "dependencies": {
+    "handlebars": "^4.0.6",
+    "hapi": "^16.0.2",
+    "lodash.filter": "^4.6.0",
+    "lodash.take": "^4.1.1",
+    "request": "^2.79.0",
+    "vision": "^4.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carlos Cuellar",
+  "license": "ISC"
+}
